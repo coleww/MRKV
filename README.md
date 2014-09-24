@@ -3,6 +3,9 @@
 ### An actual real life demonstration of everything that this gem does:
 
 ```
+$ gem install mrkv
+Successfully installed mrkv-0.1.0
+1 gem installed
 $ irb
 irb(main):001:0> require 'mrkv'
 => true
