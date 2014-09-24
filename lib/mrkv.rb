@@ -9,29 +9,31 @@ module Mrkv
 
     def add lines
       lines.each do |line|
-        line.split(" ").each_cons(ngram + 1) do |link|
+        line.downcase.capitalize.gsub(/[^a-zA-Z0-9\.\!\?\s]/, '').split.each_cons(@ngram + 1) do |link|
           next if link.nil?
-          @chain[link.take(ngram).join(" ").downcase] << link.last
+          @chain[link.take(@ngram).join(" ")] << link.last
         end
       end
+      @starters = @chain.keys.select{|k| k =~ /^[A-Z]/}
     end
 
-    def random_key
-      @chain.keys.sample
-    end
-
-    def generate key
-      key + " " + @chain[key].sample
+    def generate
+      random_starter.split.tap do |str_arr|
+        until str_arr.last.match /[\?\!\.]$/
+          possibilities = @chain[str_arr[-@ngram..-1].join(" ")]
+          if !possibilities.empty?
+            str_arr << possibilities.sample
+          else
+            str_arr.last << ["?", "!", "."].sample
+          end
+        end
+      end.join(" ")
     end
 
   private
 
-    def ngram
-      @ngram
-    end
-
-    def keys
-      @chain.keys
+    def random_starter
+      @starters.sample
     end
   end
 end
