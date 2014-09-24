@@ -15,6 +15,7 @@ module Mrkv
         end
       end
       @starters = @chain.keys.select{|k| k =~ /^[A-Z]/}
+      true
     end
 
     def generate
