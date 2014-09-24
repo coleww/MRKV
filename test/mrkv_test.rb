@@ -20,8 +20,8 @@ class TestMrkvChain <  Minitest::Test
   end
 
   def test_it_finds_random_keys
-    randoms = [0..90].map { |r| @chain.random_key }
-    assert_equal 3, randoms.uniq
+    randoms = [*0..90].map { |r| @chain.generate 'i like' }
+    assert_equal 3, randoms.uniq.length
   end
 
 end

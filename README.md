@@ -20,6 +20,6 @@
 
 #### finds potential keys in text, picks one at random, and calls generate with it, backwards and forwards
 
-### new(options={ngram: 2, backwards: true})
+### new(options={ngram: 2, backwards: true, separator: ' '})
 
 ####CHOICES! JUST LIEK IN THE FREE MARKET!!!!!!
