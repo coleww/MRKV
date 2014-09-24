@@ -1,5 +1,7 @@
 # mrkv
 
+[![Gem Version](https://badge.fury.io/rb/mrkv.svg)](http://badge.fury.io/rb/mrkv) [![Build Status](https://travis-ci.org/coleww/mrkv.svg?branch=master)](https://travis-ci.org/coleww/mrkv)
+
 ### An actual real life demonstration of everything that this gem does:
 
 ```
