@@ -8,7 +8,7 @@ class TestMrkvChain <  Minitest::Test
   end
 
   def test_it_has_ngram_defaulting_to_two
-    assert_equal 2, (Mrkv::Chain.send :ngram)
+    assert_equal 2, (@chain.send :ngram)
   end
 
   def test_it_turns_arrays_of_lines_into_chains
@@ -19,8 +19,8 @@ class TestMrkvChain <  Minitest::Test
     assert_match /i like \w+/, (@chain.generate 'i like')
   end
 
-  def test_it_randoms
-    randoms = [0..90].map { |r| @chain.random }
+  def test_it_finds_random_keys
+    randoms = [0..90].map { |r| @chain.random_key }
     assert_equal 3, randoms.uniq
   end
 
