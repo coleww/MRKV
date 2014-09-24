@@ -1,29 +1,11 @@
-# Mrkv
+# mrkv
 
-TODO: Write a gem description
+MVP ALL-STAR API
+new(ngram)
+add(array_of_lines)
+generate(start_words)
+random() => pulls random start_words from chain
 
-## Installation
+v0.2.0
+respond(text) => finds potential keys in text, picks one at random, and calls generate with it
 
-Add this line to your application's Gemfile:
-
-    gem 'mrkv'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install mrkv
-
-## Usage
-
-TODO: Write usage instructions here
-
-## Contributing
-
-1. Fork it ( https://github.com/[my-github-username]/mrkv/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request

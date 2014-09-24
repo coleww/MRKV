@@ -1,5 +1,8 @@
 require "mrkv/version"
 
 module Mrkv
-  # Your code goes here...
+  class Chain
+    def initialize
+    end
+  end
 end
