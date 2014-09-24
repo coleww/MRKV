@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = Mrkv::VERSION
   spec.authors       = ["Cole Willsea"]
   spec.email         = ["coleww@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.summary       = %q{it is a markov chain. it generates silly text.}
+  spec.description   = %q{given an array of source lines, builds a markov chain and generates random sentences.}
+  spec.homepage      = "https://github.com/coleww/mrkv"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
